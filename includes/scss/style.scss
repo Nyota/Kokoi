@@ -30,12 +30,9 @@ Kokoi is distributed under the terms of the GNU GPL.
 
 
 	//Typography:
-	--font-text: 'aktiv-grotesk', 'Helvetica', 'Arial', sasn-serif;
-	 --koko-font-headers: 'area-inktrap-extended', 'Helvetica', 'Arial', sans-serif;
 	--font-global-text-size: 1.25em;
-
-	//--font-text: "General Sans";
-	// --koko-font-headers: "General Sans";
+	--koko-font-text: "General Sans";
+	--koko-font-headers: "General Sans";
 
 	// Fluid font sizes
    --koko-font-sizes-xsmall: clamp(0.6331rem, 0.8172rem + -0.1534vw, 0.7813rem);
@@ -84,7 +81,7 @@ body {
 	background: var( --koko-color-background);
 	color: var( --koko-color-foreground);
 	line-height: 1.5;
-	font-family: var(--font-text);
+	font-family: var(--koko-font-text);
 	font-size: var( --koko-font-size);
 	margin: 0;
 	padding: 0;
