@@ -131,8 +131,8 @@ if( ! function_exists( 'koko_portfolio_post_pagination' ) ){
 								<div class="single-section-title-content"></div>
 							</div>
 							<div class="single-section-inner"><div class="single-pagination"><div class="nav-previous alignleft">' 
-							. get_previous_post_link( '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"></path></svg> %link', '%title', false, '', 'koko_types' ) . '</div>
-					<div class="nav-next alignright">' . get_next_post_link(' %link <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"></path></svg>', '%title', false, 'koko_types') . '</div></div></div></section>';
+							. get_previous_post_link( '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"></path></svg> %link', '%title', false, '', 'prtp_types' ) . '</div>
+					<div class="nav-next alignright">' . get_next_post_link(' %link <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"></path></svg>', '%title', false, 'prtp_types') . '</div></div></div></section>';
 
 		echo $o;
 	}

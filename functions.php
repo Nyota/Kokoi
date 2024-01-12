@@ -183,9 +183,9 @@ add_action( 'enqueue_block_editor_assets', 'koko_typekit_fonts_editor' );
 * @since  1.0
 * @return void
 */
-if ( ! function_exists( 'koko_custom_post_type' ) ) {
+if ( ! function_exists( 'prtp_custom_post_type' ) ) {
 	function koko_custom_post_type() {
-    register_post_type('koko_portfolio',
+    register_post_type('prtp_portfolio',
         array(
             'labels'      => array(
                 'name'          => __( 'Portfolio', 'textdomain' ),
@@ -197,7 +197,7 @@ if ( ! function_exists( 'koko_custom_post_type' ) ) {
             'hierarchical' => true,
             "show_ui" => true,
             'show_in_rest' => true,
-            'taxonomies' 	      => array( 'koko_types' ),
+            'taxonomies' 	      => array( 'prtp_types' ),
             'supports' => array('editor', 'title', 'thumbnail', 'custom-fields', 'revisions'),
             'rewrite'     => array( 'slug' => 'portfolio' ), // my custom slug
         )
@@ -216,7 +216,7 @@ add_action('init', 'koko_custom_post_type');
 * @since  1.0
 * @return void
 */
-if ( ! function_exists( 'koko_portfolio_cpt_taxonomy' ) ) {
+if ( ! function_exists( 'prtp_portfolio_cpt_taxonomy' ) ) {
 	function koko_portfolio_cpt_taxonomy() {
 	 
 	  $labels = array(
@@ -233,7 +233,7 @@ if ( ! function_exists( 'koko_portfolio_cpt_taxonomy' ) ) {
 	    'menu_name' => __( 'Types' ),
 	  ); 	
 	 
-	  register_taxonomy( 'koko_types', array('koko_portfolio'), array(
+	  register_taxonomy( 'prtp_types', array('prtp_portfolio'), array(
 	    'hierarchical' => true,
 	    'labels' => $labels,
 	    'show_ui' => true,

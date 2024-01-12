@@ -10,7 +10,7 @@
 
 $koko_post_excerpt_length = 32;
 $args = array(
-	'post_type' => 'koko_portfolio',
+	'post_type' => 'prtp_portfolio',
 	'order' => 'ASC',
     //'posts_per_page'      => 1,
     //'post__in'            => get_option( 'sticky_posts' ),
@@ -56,7 +56,7 @@ if ( $the_query->have_posts() ) {
 
 								<div class="post-content">
 									<ul class="portfolio-item-meta">
-										<li><?php the_terms( $post->ID, 'koko_types', ''); ?></li>
+										<li><?php the_terms( $post->ID, 'prtp_types', ''); ?></li>
 										<li class="sep">&middot;</li>
 										<?php if( $custom_label ) { ?>
 											<li class="custom-label"><?php echo $custom_label; ?></li>
