@@ -24,9 +24,9 @@ Kokoi is distributed under the terms of the GNU GPL.
   --wp--style--gallery-gap-default: 2.5em;
   --gallery-block--gutter-size: 2.5em;
   --wp--style--block-gap: 2.5em;
-  --font-text: "aktiv-grotesk", "Helvetica", "Arial", sasn-serif;
-  --koko-font-headers: "area-inktrap-extended", "Helvetica", "Arial", sans-serif;
   --font-global-text-size: 1.25em;
+  --koko-font-text: "General Sans";
+  --koko-font-headers: "General Sans";
   --koko-font-sizes-xsmall: clamp(0.6331rem, 0.8172rem + -0.1534vw, 0.7813rem);
   --koko-font-sizes-small: clamp(0.8438rem, 0.9603rem + -0.0971vw, 0.9375rem);
   --koko-font-size: clamp(1rem, 0.9697rem + 0.1294vw, 1.125rem);
@@ -66,7 +66,7 @@ body {
   background: var(--koko-color-background);
   color: var(--koko-color-foreground);
   line-height: 1.5;
-  font-family: var(--font-text);
+  font-family: var(--koko-font-text);
   font-size: var(--koko-font-size);
   margin: 0;
   padding: 0;

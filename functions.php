@@ -106,7 +106,7 @@ add_action( 'wp_enqueue_scripts', 'koko_styles' );
 
 
 /**
-* koko_typekit_scripts_styles()
+* koko_font_scripts_styles()
 * Enqueue styles.
 *
 * @package WordPress
@@ -114,8 +114,8 @@ add_action( 'wp_enqueue_scripts', 'koko_styles' );
 * @since 1.0
 * @return void
 */
-if ( ! function_exists( 'koko_typekit_scripts_styles' ) ) {
-	function koko_typekit_scripts_styles() {
+if ( ! function_exists( 'koko_font_scripts_styles' ) ) {
+	function koko_font_scripts_styles() {
 
 		// Register theme version.
 		$theme_version = wp_get_theme()->get( 'Version' );
@@ -128,12 +128,6 @@ if ( ! function_exists( 'koko_typekit_scripts_styles' ) ) {
 			$version_string
 		);
 
-		wp_register_style(
-			'typekit-style-kokoi',
-			'https://use.typekit.net/sev7fxk.css',
-			array(),
-			$version_string
-		);
 
 		wp_register_script(
 			'koko-menu-nav',
@@ -145,18 +139,17 @@ if ( ! function_exists( 'koko_typekit_scripts_styles' ) ) {
 
 
 		// Enqueue theme stylesheet.
-		wp_enqueue_style( 'typekit-style-kokoi' );
 		wp_enqueue_style( 'fontshare-style-gen' );
 
 		wp_enqueue_script('koko-menu-nav');
 
 	}
 }
-add_action( 'wp_enqueue_scripts', 'koko_typekit_scripts_styles' );
+add_action( 'wp_enqueue_scripts', 'koko_font_scripts_styles' );
 
 
 /**
-* koko_typekit_fonts_editor()
+* koko_font_fonts_editor()
 * Inserts Typekit(Adobe) fonts into the Editor page.
 *
 * @package WordPress
@@ -164,14 +157,13 @@ add_action( 'wp_enqueue_scripts', 'koko_typekit_scripts_styles' );
 * @since 1.0
 * @return void
 */
-if( ! function_exists( 'koko_typekit_fonts_editor' ) ) {
-	function koko_typekit_fonts_editor() {
+if( ! function_exists( 'koko_fonts_editor' ) ) {
+	function koko_fonts_editor() {
 
 		wp_enqueue_style( 'font-css-gen', get_template_directory_uri() . '/assets/fonts/GeneralSans/Fonts/WEB/css/general-sans.css');
-		wp_enqueue_style( 'font-typekit', 'https://use.typekit.net/sev7fxk.css');
 	}
 }
-add_action( 'enqueue_block_editor_assets', 'koko_typekit_fonts_editor' );
+add_action( 'enqueue_block_editor_assets', 'koko_fonts_editor' );
 
 
 /**
