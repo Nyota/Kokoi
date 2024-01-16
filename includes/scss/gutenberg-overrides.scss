@@ -1,0 +1,224 @@
+/* Blocks */
+.wp-block-image {
+	margin-bottom: var(--wp--style--gallery-gap-default);
+}
+.wp-block-gallery {
+	margin: 0 0 var(--wp--style--gallery-gap-default) 0;
+
+	&.has-nested-images {
+		figure {
+			&.wp-block-image {
+				img {
+					object-fit: contain !important;
+					object-position: top !important;
+				}
+			}
+		}
+	}
+
+	&.columns-3 {
+		gap: 0;
+	}
+
+
+	/* Custom CSS*/
+	&.color-bg {
+
+		.wp-block-image {
+			background: #fbf2f0;
+			padding: 42px;
+		}
+
+		&.columns-3 {
+			.wp-block-image {
+				padding-right: 0;
+
+				&:last-of-type {
+					padding-right: 42px;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+.wp-block-navigation .wp-block-navigation-item a:hover,
+.wp-block-navigation .wp-block-navigation-item a:focus {
+	text-decoration: underline;
+	text-decoration-style: solid;
+}
+
+
+/*
+ * Search and File Block button styles.
+ * Necessary until the following issues are resolved in Gutenberg:
+ * https://github.com/WordPress/gutenberg/issues/36444
+ * https://github.com/WordPress/gutenberg/issues/27760
+ */
+/*
+.wp-block-search__button,
+.wp-block-file .wp-block-file__button {
+	background-color: var(--wp--preset--color--primary);
+	border-radius: 0;
+	border: none;
+	color: var(--wp--preset--color--background);
+	font-size: var(--wp--preset--font-size--medium);
+	padding: calc(.667em + 2px) calc(1.333em + 2px);
+}
+*/
+.wp-block-button .wp-block-button__link {
+	text-decoration: none;
+	line-height: 1;
+}
+
+/*
+ * Button hover styles.
+ * Necessary until the following issue is resolved in Gutenberg:
+ * https://github.com/WordPress/gutenberg/issues/27075
+ */
+
+.wp-block-search__button:hover,
+.wp-block-file .wp-block-file__button:hover,
+.wp-block-button__link:hover {
+	opacity: 0.90;
+}
+
+/*
+ * Alignment styles.
+ * These rules are temporary, and should not be relied on or
+ * modified too heavily by themes or plugins that build on
+ * Twenty Twenty-Two. These are meant to be a precursor to
+ * a global solution provided by the Block Editor.
+ *
+ * Relevant issues:
+ * https://github.com/WordPress/gutenberg/issues/35607
+ * https://github.com/WordPress/gutenberg/issues/35884
+ */
+
+.wp-site-blocks,
+body > .is-root-container,
+.edit-post-visual-editor__post-title-wrapper,
+.wp-block-group.alignfull,
+.wp-block-group.has-background,
+.wp-block-cover.alignfull,
+.is-root-container .wp-block[data-align="full"] > .wp-block-group,
+.is-root-container .wp-block[data-align="full"] > .wp-block-cover {
+	padding-left: var(--wp--custom--spacing--outer);
+	padding-right: var(--wp--custom--spacing--outer);
+}
+
+.wp-site-blocks .alignfull,
+.wp-site-blocks > .wp-block-group.has-background,
+.wp-site-blocks > .wp-block-cover,
+.wp-site-blocks > .wp-block-template-part > .wp-block-group.has-background,
+.wp-site-blocks > .wp-block-template-part > .wp-block-cover,
+body > .is-root-container > .wp-block-group.has-background,
+body > .is-root-container > .wp-block-cover,
+body > .is-root-container > .wp-block-template-part > .wp-block-group.has-background,
+body > .is-root-container > .wp-block-template-part > .wp-block-cover,
+.is-root-container .wp-block[data-align="full"] {
+	margin-left: calc(-1 * var(--wp--custom--spacing--outer)) !important;
+	margin-right: calc(-1 * var(--wp--custom--spacing--outer)) !important;
+	width: unset;
+}
+
+/* Blocks inside columns don't have negative margins. */
+.wp-site-blocks .wp-block-columns .wp-block-column .alignfull,
+.is-root-container .wp-block-columns .wp-block-column .wp-block[data-align="full"],
+/* We also want to avoid stacking negative margins. */
+.wp-site-blocks .alignfull:not(.wp-block-group) .alignfull,
+.is-root-container .wp-block[data-align="full"] > *:not(.wp-block-group) .wp-block[data-align="full"] {
+	margin-left: auto !important;
+	margin-right: auto !important;
+	width: inherit;
+}
+
+/*
+ * Responsive menu container padding.
+ * This ensures the responsive container inherits the same
+ * spacing defined above. This behavior may be built into
+ * the Block Editor in the future.
+ */
+
+.wp-block-navigation__responsive-container.is-menu-open {
+	padding-top: var(--wp--custom--spacing--outer);
+	padding-bottom: var(--wp--custom--spacing--large);
+	padding-right: var(--wp--custom--spacing--outer);
+	padding-left: var(--wp--custom--spacing--outer);
+}
+
+/* My additions */
+/*.wp-block-group {
+	outline:  1px solid lime !important;
+}
+footer {
+	outline:  1px solid hotpink;
+}
+
+footer .wp-block-navigation, 
+footer .wp-block-navigation .wp-block-page-list, 
+footer .wp-block-navigation__container, 
+footer .wp-block-navigation__responsive-container-content {
+	gap: 0.25em;
+}*/
+
+footer .wp-block-site-title + .wp-block-group {
+	margin-top: 12px;
+}
+.wp-site-blocks .wp-block-post-terms {
+	max-width:  100%;
+	margin-top: 0;
+}
+.wp-block-post-template.is-flex-container, .wp-block-query-loop.is-flex-container {
+	gap: 3rem;
+}
+
+.wp-block-cover.is-style-rounded-borders img {
+	border-radius:  16px;
+}
+/*.wp-block-columns.is-style-no-gap:not(.is-not-stacked-on-mobile) {
+	display: table;
+}
+.wp-block-columns.is-style-no-gap:not(.is-not-stacked-on-mobile) > .wp-block-column {
+	display: table-cell;
+	width: 50%;
+}
+.wp-block-columns.is-style-no-gap:not(.is-not-stacked-on-mobile) > .wp-block-column:not(:first-child) {
+	margin-left: 0;
+	display: table-cell;
+}
+.wp-block-columns.is-style-no-gap:not(.is-not-stacked-on-mobile) > .wp-block-column .wp-block-image {
+	margin-bottom: 0;
+}
+.wp-block-columns.is-style-no-gap:not(.is-not-stacked-on-mobile) > .wp-block-column .wp-block-image img {
+	max-width: 100%;
+	height: 100vh;
+	object-fit: cover;
+	object-position: center;
+}*/
+
+
+/*@media (min-width:600px) {
+ .wp-block-post-template.is-flex-container.is-flex-container.columns-2>li,
+ .wp-block-query-loop.is-flex-container.is-flex-container.columns-2>li {
+  width:calc(50% - calc(3rem / 2))
+ }
+ .wp-block-post-template.is-flex-container.is-flex-container.columns-3>li,
+ .wp-block-query-loop.is-flex-container.is-flex-container.columns-3>li {
+  width:calc(33.33333% - calc( (3rem * 2) / 3))
+ }
+ .wp-block-post-template.is-flex-container.is-flex-container.columns-4>li,
+ .wp-block-query-loop.is-flex-container.is-flex-container.columns-4>li {
+  width:calc(25% - calc( (3rem * 3) / 4))
+ }
+ .wp-block-post-template.is-flex-container.is-flex-container.columns-5>li,
+ .wp-block-query-loop.is-flex-container.is-flex-container.columns-5>li {
+  width:calc(20% - calc( (3rem * 4) / 5))
+ }
+ .wp-block-post-template.is-flex-container.is-flex-container.columns-6>li,
+ .wp-block-query-loop.is-flex-container.is-flex-container.columns-6>li {
+  width:calc(16.66667% - calc( (3rem * 5) / 6))
+ }
+}*/
