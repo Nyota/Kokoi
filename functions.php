@@ -183,7 +183,7 @@ add_action( 'enqueue_block_editor_assets', 'koko_typekit_fonts_editor' );
 * @since  1.0
 * @return void
 */
-if ( ! function_exists( 'prtp_custom_post_type' ) ) {
+if ( ! function_exists( 'koko_custom_post_type' ) ) {
 	function koko_custom_post_type() {
     register_post_type('prtp_portfolio',
         array(
