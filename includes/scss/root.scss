@@ -1,0 +1,47 @@
+:root {
+	--koko-content-width: 960px;
+	--koko-content-width-wide: 1280px;
+	--koko-content-width-full: 90vw;
+	--spacer: 64px;
+	--wp--style--gallery-gap-default: 2.5em;
+	--gallery-block--gutter-size: 2.5em;
+	--wp--style--block-gap: 2.5em;
+
+
+	//Typography:
+	--font-global-text-size: 1.25em;
+	--koko-font-text: "General Sans";
+	--koko-font-headers: "General Sans";
+
+	// Fluid font sizes
+   --koko-font-sizes-xsmall: clamp(0.6331rem, 0.8172rem + -0.1534vw, 0.7813rem);
+   --koko-font-sizes-small: clamp(0.8438rem, 0.9603rem + -0.0971vw, 0.9375rem);
+   --koko-font-size: clamp(1rem, 0.9697rem + 0.1294vw, 1.125rem);
+   --koko-font-sizes-h6: clamp(1.125rem, 1.0567rem + 0.2913vw, 1.4063rem);
+   --koko-font-sizes-h5: clamp(1.2656rem, 1.1461rem + 0.51vw, 1.7581rem);
+   --koko-font-sizes-h4: clamp(1.4238rem, 1.2359rem + 0.8013vw, 2.1975rem);
+   --koko-font-sizes-h3: clamp(1.6019rem, 1.324rem + 1.1858vw, 2.7469rem);
+   --koko-font-sizes-h2: clamp(1.8019rem, 1.4059rem + 1.6893vw, 3.4331rem);
+   --koko-font-sizes-h1: clamp(2.0275rem, 1.478rem + 2.3443vw, 4.2913rem);
+
+	// Color: Palettes
+	--koko-color-dark-scheme-background: #202020;
+	--koko-color-dark-scheme-foreground: #f3f0ed;
+	--koko-color-dark-scheme-accent: #ff9536;
+	--koko-color-dark-scheme-borders: #373636;
+	--koko-color-dark-scheme-link: #f3f0ed;
+	--koko-color-dark-scheme-link-hover: #ffffff;
+	--koko-color-dark-scheme-footer-background: #f3f0ed;
+	--koko-color-dark-scheme-footer-foreground: #202020;
+
+
+	// Color: Settings
+	--koko-color-background: var( --koko-color-dark-scheme-background);
+	--koko-color-foreground: var( --koko-color-dark-scheme-foreground);
+	--koko-color-accent: var( --koko-color-dark-scheme-accent);
+	--koko-color-borders: var( --koko-color-dark-scheme-borders);
+	--koko-color-link: var( --koko-color-dark-scheme-link);
+	--koko-color-link-hover: var( --koko-color-dark-scheme-link-hover);
+	--koko-color-footer-background: var( --koko-color-dark-scheme-accent);
+	--koko-color-footer-foreground: var( --koko-color-dark-scheme-footer-foreground);
+}
