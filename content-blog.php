@@ -20,7 +20,6 @@ while ( have_posts() ) {
 			/**
 			 * Functions hooked in to koko_blog_post add_action
 			 *
-			 * @hooked koko_blog_post_header      - 10
 			 */
 			do_action( 'koko_before_first_blog_post', $post->ID );
 			?>
@@ -34,8 +33,6 @@ while ( have_posts() ) {
 				/**
 				 * Functions hooked in to koko_blog_before_post add_action
 				 *
-				 * @hooked koko_blog_post_featured      - 10
-				 * @hooked koko_blog_post_featured_img  - 20
 				 */
 				do_action( 'koko_blog_before_post', $post->ID );
 				?>
@@ -55,9 +52,6 @@ while ( have_posts() ) {
 				/**
 				 * Functions hooked in to koko_blog_post add_action
 				 *
-				 * @hooked koko_blog_post_header      - 10
-				 * @hooked koko_blog_post_content     - 20
-				 * @hooked koko_blog_post_footer	  - 30
 				 */
 				do_action( 'koko_blog_post', $post->ID );
 				?>

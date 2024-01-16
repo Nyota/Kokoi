@@ -11,7 +11,7 @@
 						<div class="main-section-title-content"></div>
 
 						<div class="main-section-inner">
-							<p class="contact-section-text">I am always happy to talk, get in touch below.</p>
+							<p class="contact-section-text"><?php _e("I am always happy to talk, get in touch below.", "kokoi"); ?></p>
 							
 							<div class="contact-section-below-container">
 								<ul class="contact-section-list">
@@ -34,7 +34,7 @@
 					</div>
 					<footer id="site-footer">
 						<div class="footer-inner lazyload ll-style-fade-in-down">
-							<p>&copy; <?php echo date('Y'); ?> - All rights reserved <span class="sep"> &middot; </span> </p> <?php wp_nav_menu( 
+							<p>&copy; <?php echo date('Y'); ?> - <?php _e("All rights reserved", "kokoi"); ?> <span class="sep"> &middot; </span> </p> <?php wp_nav_menu( 
 						array( 
 							'theme_location' => 'footer-menu', 
 							'container_id' => 'footer-menu', 
@@ -50,8 +50,6 @@
 					/**
 					 * Functions hooked in to koko_blog_below_wrapper add_action
 					 *
-					 * @hooked koko_blog_image_container        - 10
-					 * @hooked koko_overlay_nav_container - 30
 					 */
 					do_action( 'koko_blog_below_wrapper' );
 
