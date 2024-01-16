@@ -35,29 +35,10 @@
 								</div>
 							</div>
 
-							<?php /*<section class="main-section hero-section">
-								<div class="main-section-inner">
-
-									<h1><?php the_title(); ?></h1>
-								</div>
-							</section>
-
-							<section class="main-section">
-								<div class="main-section-inner">
-									
-									<div class="main-section-title-content">
-									</div>
-									<?php the_content(); ?>
-								</div>
-							</section>*/ ?>
-
-
-
 							<?php
 								/**
 								 * Functions hooked in to koko_blog_after_posts add_action
 								 *
-								 * //@hooked koko_posts_pagination      - 10
 								 */
 								do_action( 'koko_blog_after_posts' ); ?>
 							</div>

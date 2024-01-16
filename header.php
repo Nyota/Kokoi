@@ -27,7 +27,6 @@
 			/**
 			 * Functions hooked in to koko_before_theme_wrapper add_action
 			 *
-			 * @hooked koko_dark_mode_button - 10
 			 */
 			do_action( 'koko_before_theme_wrapper' );
 			?>

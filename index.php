@@ -28,25 +28,25 @@
 							<section class="main-section hero-section main-section-flexed main-section-full">
 								<div class="main-section-title-content"></div>
 								<div class="main-section-inner">
-									<h2>Hello 👋🏾 I'm Kathrine, passionate about WordPress theme development and design.</h2>
+									<h2><?php _e("Hello 👋🏾 I'm Kathrine, passionate about WordPress theme development and design.", "kokoi"); ?></h2>
 								</div>
 							</section>
 
 							<div class="main-section about-section main-section-flexed" id="about">
 								<div class="main-section-title-content">
 									<div class="main-section-title-content-inner">
-										<h2>About</h2>
+										<h2><?php _e("About", "kokoi"); ?></h2>
 									</div>
 								</div>
 								<div class="main-section-inner">
-									<p>Previously a self-taught web designer, I recently graduated with a Bachelor of Science in Media and Computer Science from the Berliner Hochschule für Technik, Germany. I have previous experience designing, developing and selling WordPress themes on Themeforest. I'm passionate about the design as well as the coding process. I currently work at NextHealth GmbH, Berlin.</p>
+									<p><?php _e("Previously a self-taught web designer, I recently graduated with a Bachelor of Science in Media and Computer Science from the Berliner Hochschule für Technik, Germany. I have previous experience designing, developing and selling WordPress themes on Themeforest. I'm passionate about the design as well as the coding process. I currently work at NextHealth GmbH, Berlin.", "kokoi"); ?></p>
 								</div>
 							</div>
 
 							<section class="main-section portfolio-section main-section-flexed" id="portfolio">
 								<div class="main-section-title-content">
 									<div class="main-section-title-content-inner">
-										<h2>Portfolio</h2>
+										<h2><?php _e("Portfolio", "kokoi"); ?></h2>
 									</div>
 								</div>
 								<div class="main-section-inner">
@@ -58,14 +58,14 @@
 							<section class="main-section skills-section main-section-flexed" id="skills">
 								<div class="main-section-title-content">
 									<div class="main-section-title-content-inner">
-										<h2>Skills</h2>
+										<h2><?php _e("Skills", "kokoi"); ?></h2>
 									</div>
 								</div>
 
 								<div class="main-section-inner">
 									<div class="skills-flex-box">
 										<div class="skills-col">
-											<h3>Design</h3>
+											<h3><?php _e("Design", "kokoi"); ?></h3>
 											<ul>
 												<li>UI/UX Design</li>
 												<li>Interaction Design</li>
@@ -74,7 +74,7 @@
 											</ul>
 										</div>
 										<div class="skills-col">
-											<h3>Dev</h3>
+											<h3><?php _e("Dev", "kokoi"); ?></h3>
 											<ul>
 												<li>WordPress Theme Development</li>
 												<li>PHP/HTML5/CSS3</li>
@@ -83,7 +83,7 @@
 											</ul>
 										</div>
 										<div class="skills-col">
-											<h3>Tools</h3>
+											<h3><?php _e("Tools", "kokoi"); ?></h3>
 											<ul>
 												<li>Photoshop CC</li>
 												<li>Figma</li>
@@ -103,7 +103,7 @@
 							<section class="blog-section main-section main-section-flexed" id="thoughts">
 								<div class="main-section-title-content">
 									<div class="main-section-title-content-inner">
-										<h2>Thoughts</h2>
+										<h2><?php _e("Thoughts", "kokoi"); ?></h2>
 									</div>
 								</div>
 
@@ -135,7 +135,6 @@
 									/**
 									 * Functions hooked in to koko_blog_after_posts add_action
 									 *
-									 * //@hooked koko_posts_pagination      - 10
 									 */
 									do_action( 'koko_blog_after_posts' ); ?>
 							</section>
